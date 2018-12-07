@@ -23,30 +23,3 @@
 // 		return $this->color;
 // 	}
 // }
-
-// $a = Robot::createRedRobot('ロボ太郎');
-// $b = Robot::createBlueRobot('ロボ次郎');
-
-// echo $a->getColor().PHP_EOL;
-// echo $b->getColor();
-
-class dog {
-	private $name;
-	public function setName($name){
-		$name = filter_var($name);
-		if($name === false){
-			throw new InvalidArgumentException('変な名前');
-		}
-		$this->name = $name;
-	}
-	public function getName(){
-		return $this->name;
-	}
-}
-
-$dog1 = new dog;
-$dog1->setName('あいう');
-echo $dog1->getName();
-
-
-?>
